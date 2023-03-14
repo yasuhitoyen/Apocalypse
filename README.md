@@ -8,3 +8,4 @@ Multiplayer:
 > Have one person host a game and the other join (you must be on the same wifi)
 > You can chat with eachother once you enter, and player 1 will choose the level
 > Enjoy!
+![alt text](../images/HomeScreen.png)
