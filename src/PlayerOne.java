@@ -1088,60 +1088,6 @@ public class PlayerOne extends JPanel implements KeyListener, ActionListener, Mo
         }
       }
 
-      // arc sin opp/hyp =
-
-      /*
-       * bulletCoorX[0] = PLAYER_X + PLAYER_WIDTH / 2;
-       * bulletCoorY[0] = PLAYER_Y + PLAYER_HEIGHT / 2;
-       * 
-       * bulletCoorX[1] = PLAYER_X + PLAYER_WIDTH / 2 + (int)(5 *
-       * Math.cos(Math.toRadians(p1GunAngle + 90)));
-       * bulletCoorY[1] = PLAYER_Y + PLAYER_HEIGHT / 2 + (int)(5 *
-       * Math.sin(Math.toRadians(p1GunAngle + 90)));
-       * 
-       * bulletCoorX[2] = PLAYER_X + PLAYER_WIDTH / 2 + (int)(5 *
-       * Math.cos(Math.toRadians(p1GunAngle + 90))) + (int)(p1BulletDistance *
-       * Math.cos(Math.toRadians(p1GunAngle)));
-       * bulletCoorY[2] = PLAYER_Y + PLAYER_HEIGHT / 2 + (int)(5 *
-       * Math.sin(Math.toRadians(p1GunAngle + 90))) + (int)(p1BulletDistance *
-       * Math.sin(Math.toRadians(p1GunAngle)));
-       * 
-       * bulletCoorX[3] = PLAYER_X + PLAYER_WIDTH / 2 + (int)(p1BulletDistance *
-       * Math.cos(Math.toRadians(p1GunAngle))) + (int)(5 *
-       * Math.cos(Math.toRadians(p1GunAngle + 90)));
-       * bulletCoorY[3] = PLAYER_Y + PLAYER_HEIGHT / 2 + (int)(p1BulletDistance *
-       * Math.sin(Math.toRadians(p1GunAngle)) + (int)(5 *
-       * Math.sin(Math.toRadians(p1GunAngle + 90))));
-       * 
-       * 
-       * g2d.drawLine(bulletCoorX[3], bulletCoorY[3], mouseX, mouseY);
-       */
-
-      /*
-       * g2d.drawLine(PLAYER_X + PLAYER_WIDTH / 2, PLAYER_Y + PLAYER_HEIGHT / 2,
-       * PLAYER_X + PLAYER_WIDTH / 2 + (int)(p1BulletDistance *
-       * Math.cos(Math.toRadians(p1GunAngle))), PLAYER_Y + PLAYER_HEIGHT / 2 +
-       * (int)(p1BulletDistance * Math.sin(Math.toRadians(p1GunAngle))));
-       * g2d.drawLine(PLAYER_X + PLAYER_WIDTH / 2, PLAYER_Y + PLAYER_HEIGHT / 2,
-       * PLAYER_X + PLAYER_WIDTH / 2 + (int)(5 * Math.cos(Math.toRadians(p1GunAngle +
-       * 90))), PLAYER_Y + PLAYER_HEIGHT / 2 + (int)(5 *
-       * Math.sin(Math.toRadians(p1GunAngle + 90))));
-       * g2d.drawLine(PLAYER_X + PLAYER_WIDTH / 2 + (int)(5 *
-       * Math.cos(Math.toRadians(p1GunAngle + 90))), PLAYER_Y + PLAYER_HEIGHT / 2 +
-       * (int)(5 * Math.sin(Math.toRadians(p1GunAngle + 90))),PLAYER_X + PLAYER_WIDTH
-       * / 2 + (int)(5 * Math.cos(Math.toRadians(p1GunAngle + 90))) +
-       * (int)(p1BulletDistance * Math.cos(Math.toRadians(p1GunAngle))), PLAYER_Y +
-       * PLAYER_HEIGHT / 2 + (int)(5 * Math.sin(Math.toRadians(p1GunAngle + 90)) +
-       * (int)(p1BulletDistance * Math.sin(Math.toRadians(p1GunAngle)))));
-       * g2d.drawLine(PLAYER_X + PLAYER_WIDTH / 2 + (int)(p1BulletDistance *
-       * Math.cos(Math.toRadians(p1GunAngle))), PLAYER_Y + PLAYER_HEIGHT / 2 +
-       * (int)(p1BulletDistance * Math.sin(Math.toRadians(p1GunAngle))),PLAYER_X +
-       * PLAYER_WIDTH / 2 + (int)(p1BulletDistance *
-       * Math.cos(Math.toRadians(p1GunAngle))) + (int)(5 *
-       * Math.cos(Math.toRadians(p1GunAngle + 90))), PLAYER_Y + PLAYER_HEIGHT / 2 +
-       * (int)(p1BulletDistance * Math.sin(Math.toRadians(p1GunAngle)) + (int)(5 *
-       * Math.sin(Math.toRadians(p1GunAngle +90)))));
-       */
       g2d.setColor(Color.red);
       g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.6f));
       if (!gameEnded)
@@ -1230,37 +1176,6 @@ public class PlayerOne extends JPanel implements KeyListener, ActionListener, Mo
           }
         }
         if (PLAYER_Y + PLAYER_HEIGHT == y && !gameEnded) {
-          /*
-           * if(bullet.showBullet)
-           * {
-           * g2d.fill(p2Bullet);
-           * }
-           */
-          /*
-           * for(GunBullet currentBullet : p2GunBullets)
-           * {
-           * 
-           * if(currentBullet.playerRightLooked)
-           * {
-           * g2d.rotate(Math.toRadians(currentBullet.gunAngle),
-           * currentBullet.xPosFromPlayer, currentBullet.yPosFromPlayer);
-           * g2d.drawImage(bulletImage, currentBullet.xPosFromPlayer,
-           * currentBullet.yPosFromPlayer, 14, 7, null);
-           * g2d.rotate(Math.toRadians(360 - currentBullet.gunAngle),
-           * currentBullet.xPosFromPlayer, currentBullet.yPosFromPlayer);
-           * }
-           * else if(currentBullet.gunAngle != 90 || currentBullet.gunAngle != -90)
-           * {
-           * g2d.rotate(Math.toRadians(currentBullet.gunAngle + 180),
-           * currentBullet.xPosFromPlayer, currentBullet.yPosFromPlayer);
-           * g2d.drawImage(bulletImage, currentBullet.xPosFromPlayer + 10,
-           * currentBullet.yPosFromPlayer, 14, 7, null);
-           * g2d.rotate(Math.toRadians(180 - currentBullet.gunAngle),
-           * currentBullet.xPosFromPlayer, currentBullet.yPosFromPlayer);
-           * }
-           * 
-           * }
-           */
 
           g2d.drawRect(PLAYER_X + mouseFromMiddleX / -20, PLAYER_Y + mouseFromMiddleY / -20, 50, 50);
           if (p2RightLooked) {
@@ -1386,16 +1301,8 @@ public class PlayerOne extends JPanel implements KeyListener, ActionListener, Mo
       if (!gameEnded)
         g2d.drawImage(healthBar, 0, 0, 500, 90, null);
 
-      // -----------------------------------------------------------------
-
       g.setFont(new Font("Sans serif", Font.BOLD, 25));
-      /*
-       * if(p2It)
-       * g.drawString("You're it",p2X - 24, p2Y);
-       * else
-       * g.drawString("Opponent it", p1X - 40, p1Y);
-       */
-      // -----------------------------------------------------------------
+
       for (RainDropletsGame currentDrop : rain) {
         g2d.drawImage(raindropImage, currentDrop.xPos + p1X * -1, currentDrop.yPos + p1Y * -1, 13, 25, null);
       }

@@ -387,16 +387,7 @@ public class PlayerTwo extends JPanel implements KeyListener, ActionListener, Mo
 				} else {
 					p2It = true;
 				}
-				/*
-				 * if(tagged)
-				 * {
-				 * p2X = 1543;
-				 * p2Y = 710;
-				 * }
-				 * 
-				 * if(!p2LeftLooked && rightKey) p2RightLooked = true;
-				 * if(!p2RightLooked && leftKey) p2LeftLooked = true;
-				 */
+
 				if (mouseX > PLAYER_X + PLAYER_WIDTH / 2) {
 					p2RightLooked = true;
 					p2LeftLooked = false;

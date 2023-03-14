@@ -125,47 +125,6 @@ public class EquipmentShop extends JPanel implements MouseListener, ActionListen
         shopBackground = new ImageIcon("../images/ShopBackground.png").getImage();
         backShop = new ImageIcon("../images/backSetting.png").getImage();
         exitClientSign = new ImageIcon("../images/EXITCLIENT.png").getImage();
-        /*
-         * glockBuy1 = new ImageIcon("../images/GlockBuy1.png").getImage();
-         * glockBuy2 = new ImageIcon("../images/GlockBuy2.png").getImage();
-         * glockSelect1 = new ImageIcon("../images/GlockSelect1.png").getImage();
-         * glockSelect2 = new ImageIcon("../images/GlockSelect2.png").getImage();
-         * 
-         * desertEagleBuy1 = new ImageIcon("../images/DesertEagleBuy1.png").getImage();
-         * desertEagleBuy2 = new ImageIcon("../images/DesertEagleBuy2.png").getImage();
-         * desertEagleSelect1 = new
-         * ImageIcon("../images/DesertEagleSelect1.png").getImage();
-         * desertEagleSelect2 = new
-         * ImageIcon("../images/DesertEagleSelect2.png").getImage();
-         * 
-         * miniUziBuy1 = new ImageIcon("../images/MiniUziBuy1.png").getImage();
-         * miniUziBuy2 = new ImageIcon("../images/MiniUziBuy2.png").getImage();
-         * miniUziSelect1 = new ImageIcon("../images/MiniUziSelect1.png").getImage();
-         * miniUziSelect2 = new ImageIcon("../images/MiniUziSelect2.png").getImage();
-         * 
-         * aKBuy1 = new ImageIcon("../images/AKBuy1.png").getImage();
-         * aKBuy2 = new ImageIcon("../images/AKBuy2.png").getImage();
-         * aKSelect1 = new ImageIcon("../images/AKSelect1.png").getImage();
-         * aKSelect2 = new ImageIcon("../images/AKSelect2.png").getImage();
-         * 
-         * pm12Buy1 = new ImageIcon("../images/PM12Buy1.png").getImage();
-         * pm12Buy2 = new ImageIcon("../images/PM12Buy2.png").getImage();
-         * pm12Select1 = new ImageIcon("../images/PM12Select1.png").getImage();
-         * pm12Select2 = new ImageIcon("../images/PM12Select2.png").getImage();
-         * 
-         * awmBuy1 = new ImageIcon("../images/AWMBuy1.png").getImage();
-         * awmBuy2 = new ImageIcon("../images/AWMBuy2.png").getImage();
-         * awmSelect1 = new ImageIcon("../images/AWMSelect1.png").getImage();
-         * awmSelect2 = new ImageIcon("../images/AWMSelect2.png").getImage();
-         * 
-         * laserGunBuy1 = new ImageIcon("../images/LaserGunBuy1.png").getImage();
-         * laserGunBuy2 = new ImageIcon("../images/LaserGunBuy2.png").getImage();
-         * laserGunSelect1 = new ImageIcon("../images/LaserGunSelect1.png").getImage();
-         * laserGunSelect2 = new ImageIcon("../images/LaserGunSelect2.png").getImage();
-         * 
-         * shopBackground = new ImageIcon("../images/ShopBackground.png").getImage();
-         * backShop = new ImageIcon("../images/backSetting.PNG").getImage();
-         */
 
         addMouseListener(this);
         addMouseMotionListener(this);

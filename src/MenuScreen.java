@@ -68,10 +68,7 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
     enterIP = "";
     showIP = "";
     ipFont = new Font("Sans serif", Font.BOLD, 60);
-    /// *
-    // */
 
-    /// *
     instructions = new ImageIcon("../images/Instructionsz.png").getImage();
     loginBackground = new ImageIcon("../images/LoginBackground.png").getImage();
     loginShooting = new ImageIcon("../images/LoginShooting.png").getImage();
@@ -99,7 +96,6 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
     loginSinglePlayer1 = new ImageIcon("../images/SinglePlayer1.png").getImage();
     loginSinglePlayer2 = new ImageIcon("../images/SinglePlayer2.png").getImage();
 
-    // */
     loginPlaySensor = new Rectangle();
     loginPlaySensor.setBounds(0, 475, 300, 70);
     loginSettingSensor = new Rectangle();
@@ -210,7 +206,7 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
 
     g2d.setColor(Color.MAGENTA);
 
-    /////////////////////
+    ///
     if (menuMode == 1) {
       g2d.drawImage(loginTitle, 400 + (mouseFromMiddleX / 14), 100 + (mouseFromMiddleY / 14), 600, 90, null);
 
@@ -218,12 +214,6 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
         g2d.drawImage(loginPlay2, 0, 450, 371, 130, null);
       } else {
         g2d.drawImage(loginPlay1, 109, 493, 100, 44, null);
-      }
-
-      if (mouseInSettings) {
-        // g2d.drawImage(loginSettings2, 0, 550, 371, 130, null);
-      } else {
-        // g2d.drawImage(loginSettings1, 102, 591, 168, 63, null);
       }
     } else if (menuMode == 2) {
       g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.96f));
@@ -312,8 +302,6 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
        * If the mouse is inside the buttons
        * and is clicked, then it changes the
        * settings
-       * 
-       * 
        */
       mouseX = e.getX();
       mouseY = e.getY();
@@ -329,7 +317,6 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
           menuMode = 1;
         }
         if (mouseInMovement) {
-          // 630, 120, 240, 100
           if (mouseX < 750) {
             movementType = 1;
           } else {
@@ -337,7 +324,6 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
           }
         }
         if (mouseInShoot) {
-          // 630, 120, 240, 100
           if (mouseX < 750) {
             shootType = 1;
           } else {
@@ -400,55 +386,55 @@ public class MenuScreen extends JPanel implements MouseListener, MouseMotionList
     } else {
       mouseInPlay = false;
     }
-    ////////
+
     if (loginSettingSensor.contains(mouseX, mouseY)) {
       mouseInSettings = true;
     } else {
       mouseInSettings = false;
     }
-    ////////
+
     if (loginMovementSensor.contains(mouseX, mouseY)) {
       mouseInMovement = true;
     } else {
       mouseInMovement = false;
     }
-    ////////
+
     if (loginBackSensor.contains(mouseX, mouseY)) {
       mouseInBack = true;
     } else {
       mouseInBack = false;
     }
-    ////////
+
     if (loginMovementSensor.contains(mouseX, mouseY)) {
       mouseInMovement = true;
     } else {
       mouseInMovement = false;
     }
-    ////////
+
     if (loginShootSensor.contains(mouseX, mouseY)) {
       mouseInShoot = true;
     } else {
       mouseInShoot = false;
     }
-    ////////
+
     if (loginVolumeSensor.contains(mouseX, mouseY)) {
       mouseInVolume = true;
     } else {
       mouseInVolume = false;
     }
-    ////////
+
     if (loginHostSensor.contains(mouseX, mouseY)) {
       mouseInHost = true;
     } else {
       mouseInHost = false;
     }
-    ////////
+
     if (loginJoinSensor.contains(mouseX, mouseY)) {
       mouseInJoin = true;
     } else {
       mouseInJoin = false;
     }
-    /////////
+
     if (loginSinglePlayerSensor.contains(mouseX, mouseY)) {
       touchingSinglePlayer = true;
     } else {

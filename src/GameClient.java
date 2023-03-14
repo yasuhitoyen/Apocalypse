@@ -300,10 +300,6 @@ public class GameClient implements ActionListener {
 			showInfo = recieveServer.readBoolean();
 			level = recieveServer.readInt();
 			mapName = (String) recieveServer.readObject();
-			// System.out.println(p1GunBulletGunAngle.length);
-			// objectsInArray = (Objects[])recieveServer.readObject();
-			// System.out.println(objectsInArray.length);
-
 		}
 	}
 

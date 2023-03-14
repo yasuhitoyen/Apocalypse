@@ -420,7 +420,6 @@ public class ControlPanel extends JPanel implements ActionListener {
 						playerOne.zombieLimit = 6;
 						playerOne.zombiesAtOnce = 60;
 					}
-
 					playerOne.objects.add(new Objects("Border1", 0, 0));
 					playerOne.objects.add(new Objects("Border2", 0, 0));
 					playerOne.objects.add(new Objects("Border3", 0, 0));
@@ -610,13 +609,14 @@ public class ControlPanel extends JPanel implements ActionListener {
 					playerOne.zombieLimit = 6;
 					playerOne.zombiesAtOnce = 60;
 				}
-
+				playerOne.objects.add(
+						new Objects("Helicopter", (int) (FRAME_WIDTH * 3.0 / 2.0),
+								(int) (FRAME_HEIGHT * 3.0 / 2.0)));
 				playerOne.objects.add(new Objects("Border1", 0, 0));
 				playerOne.objects.add(new Objects("Border2", 0, 0));
 				playerOne.objects.add(new Objects("Border3", 0, 0));
 				playerOne.objects.add(new Objects("Border4", 0, 0));
-				playerOne.objects.add(
-						new Objects("Helicopter", (int) (FRAME_WIDTH * 3.0 / 2.0), (int) (FRAME_HEIGHT * 3.0 / 2.0)));
+				System.out.println("COMES HERE");
 				playerOne.overallSurvivors = playerOne.survivors.size();
 				playerOne.numRescued = playerOne.survivors.size();
 				playerOne.gameEnded = false;

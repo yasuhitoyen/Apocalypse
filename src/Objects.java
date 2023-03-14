@@ -26,7 +26,7 @@ public class Objects {
 
 	public Objects(String image, int xPos, int yPos) {
 		hitbox = new Rectangle();
-		objectImage = new ImageIcon(image + ".png").getImage();
+		objectImage = new ImageIcon("../images/" + image + ".png").getImage();
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.image = image;
@@ -130,11 +130,4 @@ public class Objects {
 
 	}
 
-	public void setPlayerPosition(int px, int py) {
-		/*
-		 * This method is a test
-		 * IGNORE IGNORE IGNROE
-		 */
-		hitbox = new Rectangle(hitboxX + px * -1, hitboxY + py * -1, hitboxWidth, hitboxHeight);
-	}
 }
